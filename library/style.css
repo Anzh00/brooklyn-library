@@ -13,6 +13,15 @@ body {
   background-color: #ffffff;
 }
 
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color:#BB945F;
+}
+
 .wrapper {
   width: 1440px;
   margin: 0 auto;
@@ -66,8 +75,6 @@ body {
 
 .nav__link {
   color: #ffffff;
-  text-decoration: none;
-  font-size: 20px;
 }
 
 .drop-menu {
@@ -106,17 +113,207 @@ body {
   font-weight: 400;
   font-size: 40px;
   letter-spacing: 2px;
-  margin: 20px 0;
+  margin: 19px 0;
 }
 
 .stroke {
   height: 1px;
-  width: 50px;
-  background-color: #0C0C0E;
   margin: 0 auto;
 }
 
+.stroke_black {
+  width: 50px;
+  background-color: #0C0C0E;
+  margin-bottom: 40px;
+}
+
 .about__text {
+  color: #000000;
   text-align: center;
   font-size: 20px;
+  margin: 45px 0 30px 0;
+}
+
+.slider__gallery {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slider__img:not(:last-child) {
+  margin-right: 25px;
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+
+.dot {
+  height: 26px;
+  width: 26px;
+}
+
+.dot__figure {
+  height: 16px;
+  width: 16px;
+  background-color: #0C0C0E;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.dot__figure_active {
+  background-color: #BB945F;
+}
+
+.favorites__pick {
+  margin-bottom: 36px;
+}
+
+.favorites__text {
+  font-size: 20px;
+  margin: 40px 0;
+}
+
+.favorites__input label {
+  margin-left: 15px;
+  font-size: 20px;
+}  
+
+.favorites__input label:not(:last-child) {
+  margin-right: 77px;
+}
+
+.season-picker {
+  appearance: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.season-picker:checked {
+  border: 4px solid #ffffff;
+  background-color: #000000;
+}
+
+.season-picker:checked + label {
+  font-weight: 700;
+}
+
+.favorites__item {
+  width: 550px;
+  height: 555px;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+}
+
+.favorites__item p:first-child {
+  font-family: 'Forum', cursive;
+  margin: 15px 0 0 0;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 2px;
+}
+
+.stroke_orange {
+  width: 60px;
+  display: inline-block;
+  text-align: left;
+  background: #BB945F;
+}
+
+.favorites__book-title {
+  margin-top: 15px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.favorites__book-info {
+  color: #000000;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.btn {
+  padding: 10px 0px;
+  width: 75px;
+  height: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;  
+  color: #0C0C0E;  
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__info {
+  font-size: 20px;
+}
+
+.contacts__info p {
+  margin: 0;
+  text-transform: capitalize;
+  line-height: 60px;
+  letter-spacing: 2px;
+}
+
+.contacts__info p:first-child {
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+
+.contacts__info p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.contacts__map {
+  width: 696px;
+  height: 414px;
+}
+
+.contacts__link {
+  color: #000000;
+}
+
+.find-card-form {
+  display: block;
+}
+
+.get-card {
+  text-align: right;
+}
+
+.get-card h3 {
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+.get-card p {
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+
+.btn_sign-up {
+
+}
+
+.btn_log-in {
+
 }
