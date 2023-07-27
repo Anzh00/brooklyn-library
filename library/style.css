@@ -251,10 +251,18 @@ a:hover {
   text-align: center;
   background-color: #ffffff;
   border-radius: 2px;
+  border-style: solid;
 }
 
+.btn:hover {
+  background-color: #BB945F;
+  border-color: #BB945F;
+  transition: 0.5s;
+}
 
-
+.contacts {
+  margin-bottom: 60px;
+}
 
 .flex-container {
   display: flex;
@@ -290,8 +298,63 @@ a:hover {
   color: #000000;
 }
 
+.library-card {
+  margin-bottom: 40px;
+}
+
+.find-card h3 {
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+
 .find-card-form {
   display: block;
+  border: 3px solid #BB945F;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 600px;
+  height: 387px;
+  padding: 15px 15px 30px 15px;
+}
+
+.find-card-form__fieldset {
+  background-color: #BB945F;
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+
+.find-card-form__fieldset p {
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  margin-top: 20px;
+}
+
+.find-card-form__fieldset input {
+  width: 520px;
+  padding: 30px 0 20px 0;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+}
+
+.find-card-form__fieldset input::placeholder {
+  padding-left: 20px;
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+.btn_submit {
+  padding: 10px 40px;
+  width: 242px;
+  height: 44px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-left: 159px;
 }
 
 .get-card {
@@ -302,6 +365,8 @@ a:hover {
   font-family: 'Forum', cursive;
   font-size: 30px;
   letter-spacing: 0.6px;
+  font-weight: 400;
+  margin-top: 0;
 }
 
 .get-card p {
@@ -311,9 +376,72 @@ a:hover {
 }
 
 .btn_sign-up {
-
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
-.btn_log-in {
+.footer {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
 
+.footer a {
+  color: #ffffff;
+}
+
+.footer .flex-container:last-child {
+  align-items: baseline;
+}
+
+.footer__wrapper {
+  padding: 20px 20px;
+  height: 250px;  
+  background-color: #0C0C0E;
+  color: #ffffff;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.twitter-icon {
+  background-image: url("assets/images/icons/icon_twitter.svg");
+}
+
+.instagram-icon {
+  background-image: url("assets/images/icons/icon_instagram.svg");
+}
+
+.facebook-icon {
+  background-image: url("assets/images/icons/icon_facebook.svg");
+}
+
+.footer__address {
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+.stroke_white {
+  width: 1400px;
+  background-color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.business-hours {
+  margin: 0;
+  text-align: right;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+.rss-title {
+  padding-left: 50px;
 }

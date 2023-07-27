@@ -115,10 +115,12 @@
           <div class="find-card">
             <h3>Find your Library card</h3>  
             <form class="find-card-form" action="">
-              <p>Brooklyn Public Library</p>
-              <input type="text" placeholder="Reader's name "><br>
-              <input type="text" placeholder="Card number"><br>
-              <input type="submit" value="Check the card">
+              <fieldset class="find-card-form__fieldset">
+                <p>Brooklyn Public Library</p>
+                <input type="text" placeholder="Reader's name "><br>
+                <input type="text" placeholder="Card number"><br>         
+              </fieldset>
+              <input class="btn btn_submit" type="submit" value="Check the card">
             </form>            
           </div>
           <div class="get-card">
@@ -133,7 +135,33 @@
   </main>
   <footer class="footer">
     <div class="wrapper footer__wrapper">
-
+      <div class="flex-container">
+        <div>
+          <a class="footer__address" href="https://goo.gl/maps/T8Vd3RuFg67yooG38">286 Cadman Plaza, New York,<br> NY 11238, United States</a>
+          <div class="footer__socials">
+            <a class="twitter-link" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dru">
+              <div class="icon twitter-icon"></div>
+            </a>
+            <a class="instagram-link" href="https://www.instagram.com/">
+              <div class="icon instagram-icon"></div>
+            </a>
+            <a class="facebook-link" href="https://ru-ru.facebook.com/">
+              <div class="icon facebook-icon"></div>
+            </a>
+          </div>          
+        </div>
+        <p class="business-hours">Mon - Fri<br>
+          08:00 am - 07:00 pm<br>
+          Sat - Sun<br>
+          10:00 am - 06:00 pm</p>        
+      </div>
+      <div class="stroke stroke_white">
+      </div>
+      <div class="flex-container">
+        <p>2023</p>
+        <p class="rss-title">The Rolling Scopes School</p>
+        <a href="https://github.com/Anzh00">Anzhelika</a>
+      </div>
     </div>
   </footer>
 </body>
