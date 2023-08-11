@@ -32,13 +32,13 @@
         </div>
       </div>
       <section class="welcome">
-        <p class="welcome__text">Welcome<br> to the Brooklyn<br> Library</p>
+        <h3 class="welcome__text">Welcome<br> to the Brooklyn<br> Library</h3>
       </section>
     </div>
   </header>          
   <main class="main">
     <div class="wrapper main__wrapper">
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="section-title">About</h2>
         <div class="stroke stroke_black"></div>
         <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
@@ -61,7 +61,7 @@
           </div>
         </div>
       </section>
-      <section class="favorites">
+      <section class="favorites" id="favorites">
         <h2 class="section-title">Favorites</h2>
         <div class="stroke stroke_black"></div>
         <div class="favorites__pick">
@@ -77,30 +77,132 @@
             <label for="autumn">Autumn</label>             
           </div>         
         </div>
-        <div class="favorites__item">
-          <p>Staff Picks</p>
-          <div class="stroke stroke_orange"></div>
-          <h4 class="favorites__book-title">THE BOOK EATERS<br> By Sunyi Dean</h4>
-          <p class="favorites__book-info">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous 
-            mind-eater son from tradition and certain death. Complete with dysfunctional family values, 
-            light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+        <div class="flex-container">
+          <div class="favorites__item">
+            <p>Staff Picks</p>
+            <div class="stroke stroke_orange"></div>
+            <h4 class="favorites__book-title">THE BOOK EATERS<br> By Sunyi Dean</h4>
+            <p class="favorites__book-info">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous 
+              mind-eater son from tradition and certain death. Complete with dysfunctional family values, 
+              light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+            <img class="favorites__book-img" src="assets/images/book13.jpg" alt="book">
             <button class="btn btn_buy">Buy</button>
+          </div>
+          <div class="favorites__item">
+            <p>Staff Picks</p>
+            <div class="stroke stroke_orange"></div>
+            <h4 class="favorites__book-title">CACKLE<br> By Rachel Harrison</h4>
+            <p class="favorites__book-info">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic?
+               Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate 
+               New York and befriends a beautiful witch.</p>
+            <img class="favorites__book-img" src="assets/images/book14.jpg" alt="book">
+            <button class="btn btn_buy">Buy</button>
+          </div>
+          <div class="favorites__item">
+            <p>Staff Picks</p>
+            <div class="stroke stroke_orange"></div>
+            <h4 class="favorites__book-title">DANTE: POET OF THE SECULAR WORLD<br> By Erich Auerbach</h4>
+            <p class="favorites__book-info">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, 
+              and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul 
+              into something of divine significance—an inspired introduction to Dante's main themes.</p>
+            <img class="favorites__book-img" src="assets/images/book15.jpg" alt="book">
+            <button class="btn btn_buy">Buy</button>
+          </div>
+          <div class="favorites__item">
+            <p>Staff Picks</p>
+            <div class="stroke stroke_orange"></div>
+            <h4 class="favorites__book-title">THE LAST QUEEN<br> By Clive Irving</h4>
+            <p class="favorites__book-info">A timely and revelatory new biography of Queen Elizabeth (and her family) 
+              exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+            <img class="favorites__book-img" src="assets/images/book16.jpg" alt="book">
+            <button class="btn btn_own" disabled>Own</button>
+          </div>          
         </div>
       </section>
-      <section class="coffee-shop">
+      <section class="coffee-shop" id="coffee-shop">
         <h2 class="section-title">Coffee Shop</h2>
         <div class="stroke stroke_black"></div>
+        <p class="coffee-shop__description">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
+          You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
+        <div class="flex-container">
+          <div class="menu__drinks">
+            <h3>Coffee & Tea</h3>
+            <div class="menu__item">
+              <p class="menu__item-title">Cold Brew Coffee</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$3</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">French Press Pot</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$5</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Espresso</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$2</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Cappuccino</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$4</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Hot tea</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$2</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Cold tea</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$2</p>
+            </div>
+          </div>  
+          <div class="menu__desserts">
+            <h3>Desserts & Cakes</h3>
+            <div class="menu__item">
+              <p class="menu__item-title">Forest Gateau</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$16</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Blue Moon</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$16</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Truffle Cake</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$15</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Chocolate Cake</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$18</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Poet’s Dream Cake</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$16</p>
+            </div>
+            <div class="menu__item">
+              <p class="menu__item-title">Pineapple Cake</p>
+              <div class="stroke stroke_orange stroke_long"></div>
+              <p class="menu__item-cost">$14</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <h2 class="section-title">Our Contacts</h2>
         <div class="stroke stroke_black"></div>
         <div class="flex-container">
           <div class="contacts__info">
             <p><b>For all Library inquiries:</b></p>
             <p>
-              Please call <a class="contacts__link" href="tel:(617) 730-2370">(617) 730-2370</a><br>
-              For TTY service, please call <a class="contacts__link" href="tel:(617) 730-2370">(617) 730-2370</a><br>
-              Putterham Library: <a class="contacts__link" href="tel:(617) 730-2385">(617) 730-2385</a>
+              Please call <a class="contacts__link" href="tel:(617)730-2370">(617) 730-2370</a><br>
+              For TTY service, please call <a class="contacts__link" href="tel:(617)730-2370">(617) 730-2370</a><br>
+              Putterham Library: <a class="contacts__link" href="tel:(617)730-2385">(617) 730-2385</a>
             </p>
             <p><b>Senior Staff</b></p>
             <p>Library Director: <a class="contacts__link" href="mailto:AmandaHirst@gmail.com"><b>Amanda Hirst</b></a></p>            
@@ -108,13 +210,13 @@
           <img class="contacts__map" src="assets/images/map.png" alt="map">          
         </div>
       </section>
-      <section class="library-card">
+      <section class="library-card" id="card">
         <h2 class="section-title">Digital Library Cards</h2>
         <div class="stroke stroke_black"></div>
         <div class="flex-container">
           <div class="find-card">
             <h3>Find your Library card</h3>  
-            <form class="find-card-form" action="">
+            <form class="find-card-form">
               <fieldset class="find-card-form__fieldset">
                 <p>Brooklyn Public Library</p>
                 <input type="text" placeholder="Reader's name "><br>
@@ -159,7 +261,7 @@
       </div>
       <div class="flex-container">
         <p>2023</p>
-        <p class="rss-title">The Rolling Scopes School</p>
+        <p class="rss-title"><a href="https://rs.school/js-stage0/">The Rolling Scopes School</a></p>
         <a href="https://github.com/Anzh00">Anzhelika</a>
       </div>
     </div>
