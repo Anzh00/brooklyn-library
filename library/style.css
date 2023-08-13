@@ -23,8 +23,18 @@ a:hover {
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header {
+  background-color: #0C0C0E;
 }
 
 .header__wrapper {
@@ -65,6 +75,23 @@ a:hover {
   padding: 0px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .nav__list {
+    position: absolute;
+    right: -100%;
+    top: -17px;
+    padding: 100px 107px;
+    flex-direction: column;
+    line-height: 50px;
+    background-color: #0C0C0E;
+    transition: 0.5s;
+  }
+
+  .nav__list.active {
+    right: 0;
+  }
+}
+
 .nav__item:not(:last-child) {
   padding-right: 30px;
 }
@@ -73,19 +100,82 @@ a:hover {
   padding-right: 40px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .nav__list .nav__item {
+    padding: 0 0 29px 0;
+  }
+}
+
 .nav__link {
   color: #ffffff;
   transition-duration: 0.3s;
+}
+
+.nav__burger-btn {
+  display: none;
+  position: relative;
+  left: 105px;
+  width: 45px;
+  height: 20px;
+  border-radius: 0;
+  border: none;
+  background-color: #0C0C0E;
+  cursor: pointer;
+}
+
+.nav__burger-btn span {
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  left: 0px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+
+.nav__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.nav__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav__burger-btn {
+    display: block;
+  }
+
+  .nav__burger-btn.active span:nth-child(1) {
+    width: 40px;
+    transform: translateY(0px) translateX(5px) rotate(45deg);
+  }
+
+  .nav__burger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__burger-btn.active span:nth-child(3) {
+    width: 40px;
+    transform: translateY(0px) translateX(5px) rotate(-45deg);
+  }
 }
 
 .drop-menu {
   background-image: url("assets/images/icons/icon_profile.svg");
   height: 28px;
   width: 28px;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1024px) {
+  .drop-menu {
+    margin-right: 75px;
+  }
 }
 
 .welcome {
   background-image: url("assets/pictures/welcome.png");
+  background-position: center center;
   height: 600px;
   margin-top: -1px;
 }
@@ -136,13 +226,61 @@ a:hover {
   margin: 45px 0 30px 0;
 }
 
+@media only screen and (max-width: 1024px) {
+  .about__text {
+    margin: 40px 0 20px 0;
+    line-height: 40px;
+  }
+}
+
 .slider__gallery {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;  
+}
+
+@media only screen and (max-width: 1024px) {
+  .slider__gallery::before,
+  .slider__gallery::after {
+    content: '';
+    display: block;
+    margin-top: 25px;
+    width: 7px;
+    height: 10px;
+    z-index: 2;
+    transform: scale(1.2);
+  }
+
+  .slider__gallery::before {
+    background-image: url("assets/images/icons/icon_left.svg");
+    margin-left: 30px;
+  }
+
+  .slider__gallery::after {
+    background-image: url("assets/images/icons/icon_right.svg");
+    margin-right: 30px;
+  }  
+}
+
+
+
+.slider__img {
+  flex-shrink: 1;
 }
 
 .slider__img:not(:last-child) {
   margin-right: 25px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .slider__img:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .slider__img:not(:first-child) {
+    display: none;
+  }
 }
 
 .slider__dots {
@@ -154,6 +292,18 @@ a:hover {
 .dot {
   height: 26px;
   width: 26px;
+}
+
+.dot:nth-child(4),
+.dot:nth-child(5) {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .dot:nth-child(4),
+  .dot:nth-child(5) {
+    display: block;
+  }
 }
 
 .dot__figure {
@@ -184,7 +334,7 @@ a:hover {
 }  
 
 .favorites__input label:not(:last-child) {
-  margin-right: 72px;
+  margin-right: 74px;
 }
 
 .season-picker {
@@ -206,8 +356,14 @@ a:hover {
 }
 
 .favorites .flex-container {
-  flex-wrap: wrap;
   max-width: 1360px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .favorites .flex-container {
+    flex-direction: column;    
+    align-items: center;
+  }
 }
 
 .favorites__item {
@@ -218,6 +374,12 @@ a:hover {
   height: 555px;
   border: 1px solid #000000;
   padding: 10px 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .favorites__item {
+    left: -20px;
+  }
 }
 
 .favorites__item p:first-child {
@@ -307,9 +469,32 @@ a:hover {
   padding-bottom: 20px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .menu__drinks {
+    align-self: flex-start;
+  }
+}
+
 .menu__desserts {
   width: 450px;
   text-align: right;
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu__desserts {
+    align-self: flex-end;
+  }
+
+  .menu__desserts h3 {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .coffee-shop .flex-container {
+    flex-direction: column;    
+    align-items: center;
+  }
 }
 
 .coffee-shop h3 {
@@ -354,9 +539,17 @@ a:hover {
   margin-bottom: 60px;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: space-between;
+@media only screen and (max-width: 1245px) {
+  .contacts .flex-container {
+    flex-direction: column;    
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contacts-title {
+    margin-top: 40px;
+  }
 }
 
 .contacts__info {
@@ -380,8 +573,22 @@ a:hover {
 }
 
 .contacts__map {
-  width: 696px;
-  height: 414px;
+  max-width: 696px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .contacts__map {
+    margin-top: 85px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contacts__map {
+    align-self: center;
+  }
 }
 
 .contacts__link {
@@ -390,6 +597,13 @@ a:hover {
 
 .library-card {
   margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1110px) {
+  .library-card .flex-container {
+    flex-direction: column;    
+    align-items: center;
+  }
 }
 
 .find-card h3 {
@@ -451,6 +665,13 @@ a:hover {
   text-align: right;
 }
 
+@media only screen and (max-width: 1110px) {
+  .get-card {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
 .get-card h3 {
   font-family: 'Forum', cursive;
   font-size: 30px;
@@ -471,6 +692,7 @@ a:hover {
 }
 
 .footer {
+  background-color: #0C0C0E;
   color: #ffffff;
   font-size: 20px;
   font-weight: 400;
@@ -489,7 +711,6 @@ a:hover {
 .footer__wrapper {
   padding: 20px 20px;
   height: 250px;  
-  background-color: #0C0C0E;
   color: #ffffff;
 }
 
@@ -519,7 +740,6 @@ a:hover {
 }
 
 .stroke_white {
-  width: 1400px;
   background-color: #ffffff;
   margin-top: 30px;
   margin-bottom: 25px;
