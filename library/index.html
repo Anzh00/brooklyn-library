@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Brooklyn Public Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -14,6 +14,44 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="popup" id="register-popup">
+    <div class="popup__content">
+      <button class="btn_close">
+        <span></span>
+        <span></span>
+      </button>    
+      <form class="register-form" onsubmit="signUp(event)">
+        <h2>REGISTER</h2>
+        <label for="fname">First name</label>
+        <input type="text" id="fname">
+        <label for="lname">Last name</label>
+        <input type="text" id="lname">
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <button class="btn btn_sign-up" type="submit">Sign Up</button>
+        <div class="register-form__footer">Already have an account? <a>Login</a></div>
+      </form>
+    </div>
+  </div>
+  <div class="popup" id="login-popup">
+    <div class="popup__content">
+        <button class="btn_close">
+          <span></span>
+          <span></span>
+        </button>    
+      <form class="login-form" onsubmit="logIn(event)">
+        <h2>LOGIN</h2>
+        <label for="email">E-mail or readers card</label>
+        <input type="email" id="login-email">
+        <label for="password">Password</label>
+        <input type="password" id="login-password">
+        <button class="btn btn_log-in" type="submit">Log In</button>
+        <div class="login-form__footer">Don’t have an account? <a>Register</a></div>
+      </form>
+    </div>    
+  </div>
   <header class="header">
     <div class="wrapper welcome__wrapper">
       <div class="header__wrapper">
@@ -33,7 +71,25 @@
               <span></span>
             </button>              
           </nav>
-          <div class="drop-menu"></div>
+          <div class="profile-menu">
+            <div class="profile-menu__icon"></div>
+            <div class="profile-menu__dropdown profile-menu__dropdown_no-auth">
+              <p>Profile</p>
+              <div class="stroke stroke_orange"></div>
+              <ul class="dropdown-list_no-auth">
+                <li><a class="dropdown-list__link login-link">Log In</a></li>
+                <li><a class="dropdown-list__link register-link">Register</a></li>
+              </ul>
+            </div>
+            <div class="profile-menu__dropdown profile-menu__dropdown_auth">
+              <p>Profile</p>
+              <div class="stroke stroke_orange"></div>
+              <ul class="dropdown-list_auth">
+                <li><a class="dropdown-list__link">My profile</a></li>
+                <li><a class="dropdown-list__link">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <section class="welcome">
@@ -48,28 +104,16 @@
         <div class="stroke stroke_black"></div>
         <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
         <div class="slider">
-          <div class="slider__gallery">
-            <img class="slider__img" src="assets/pictures/image1.jpg" alt="picture">
-            <img class="slider__img" src="assets/pictures/image2.jpg" alt="picture">
-            <img class="slider__img" src="assets/pictures/image3.jpg" alt="picture">                
-          </div>
-          <div class="slider__dots">
-            <div class="dot">
-              <div class="dot__figure dot__figure_active"></div>
-            </div>
-            <div class="dot">
-              <div class="dot__figure"></div>
-            </div>
-            <div class="dot">
-              <div class="dot__figure"></div>
-            </div>
-            <div class="dot">
-              <div class="dot__figure"></div>
-            </div>
-            <div class="dot">
-              <div class="dot__figure"></div>
+          <div class="slider__frame">
+            <div class="slider__gallery">
+              <img class="slider__img" src="assets/pictures/image1.jpg" alt="picture">
+              <img class="slider__img" src="assets/pictures/image2.jpg" alt="picture">
+              <img class="slider__img" src="assets/pictures/image3.jpg" alt="picture">
+              <img class="slider__img" src="assets/pictures/image4.jpg" alt="picture">
+              <img class="slider__img" src="assets/pictures/image5.jpg" alt="picture">
             </div>
           </div>
+          <div class="slider__dots"></div>
         </div>
       </section>
       <section class="favorites" id="favorites">
@@ -78,14 +122,22 @@
         <div class="favorites__pick">
           <h3 class="favorites__text">Pick favorites of season</h3> 
           <div class="favorites__input">
-            <input class="season-picker" type="radio" id="winter" name="season" value="winter" checked>
-            <label for="winter">Winter</label>
-            <input class="season-picker" type="radio" id="spring" name="season" value="spring">
-            <label for="spring">Spring</label> 
-            <input class="season-picker" type="radio" id="summer" name="season" value="summer">
-            <label for="summer">Summer</label> 
-            <input class="season-picker" type="radio" id="autumn" name="season" value="autumn">
-            <label for="autumn">Autumn</label>             
+            <div>
+              <input class="season-picker" type="radio" id="winter" name="season" value="winter" checked>
+              <label for="winter">Winter</label>              
+            </div>
+            <div>
+              <input class="season-picker" type="radio" id="spring" name="season" value="spring">
+              <label for="spring">Spring</label>              
+            </div>
+            <div>
+              <input class="season-picker" type="radio" id="summer" name="season" value="summer">
+              <label for="summer">Summer</label>              
+            </div>
+            <div>
+              <input class="season-picker" type="radio" id="autumn" name="season" value="autumn">
+              <label for="autumn">Autumn</label>               
+            </div>
           </div>         
         </div>
         <div class="flex-container">
@@ -239,8 +291,8 @@
           <div class="get-card">
             <h3>Get a reader card</h3>
             <p>You will be able to see a reader card after<br> logging into account or you can register a new<br> account</p>
-            <button class="btn btn_sign-up">Sign Up</button>
-            <button class="btn btn_log-in">Log in</button>
+            <button class="btn btn_sign-up register-link">Sign Up</button>
+            <button class="btn btn_log-in login-link">Log in</button>
           </div>
         </div>
       </section>
